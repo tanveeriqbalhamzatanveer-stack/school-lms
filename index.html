@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ── SEO ─────────────────────────────────────────────── -->
+  <title>Nusrat High School – Learning Management System</title>
+  <meta name="description" content="Nusrat High School LMS: A comprehensive learning management system for students, teachers, and parents. Track attendance, results, fees, and timetables.">
+  <meta name="keywords" content="Nusrat High School, LMS, school management, student portal, attendance, results, fees, timetable, Lahore">
+  <meta name="author" content="Nusrat High School">
+  <meta name="robots" content="index, follow">
+
+  <!-- ── Open Graph ──────────────────────────────────────── -->
+  <meta property="og:title" content="Nusrat High School – LMS">
+  <meta property="og:description" content="Student & parent portal for Nusrat High School, Lahore. Manage academics, attendance, fees, and more.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nusrathighschool.edu.pk">
+  <meta property="og:image" content="assets/images/og-image.png">
+
+  <!-- ── Favicon ─────────────────────────────────────────── -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏫</text></svg>">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+
+  <!-- ── Fonts ───────────────────────────────────────────── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- ── Stylesheet ──────────────────────────────────────── -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════
+     LOGIN PAGE
+══════════════════════════════════════════════════════════ -->
+<div id="page-login" class="page active" role="main" aria-label="Login">
+  <div class="auth-card">
+    <div class="school-logo" aria-hidden="true">🏫</div>
+    <h1>Nusrat High School</h1>
+    <p class="subtitle">Learning Management System</p>
+
+    <!-- Role selection -->
+    <div class="role-tabs" role="tablist" aria-label="Select your role">
+      <div class="role-tab active" role="tab" aria-selected="true" tabindex="0">🎓 Student</div>
+      <div class="role-tab" role="tab" aria-selected="false" tabindex="0">📚 Teacher</div>
+      <div class="role-tab" role="tab" aria-selected="false" tabindex="0">👨‍👩‍👧 Parent</div>
+    </div>
+
+    <!-- Login form -->
+    <div class="form-group">
+      <label for="login-id">Roll Number / ID</label>
+      <input type="text" id="login-id" placeholder="e.g. NHS-2024-001" autocomplete="username" aria-required="true">
+    </div>
+    <div class="form-group">
+      <label for="login-pass">Password</label>
+      <input type="password" id="login-pass" placeholder="Enter your password" autocomplete="current-password" aria-required="true">
+    </div>
+
+    <button class="btn-primary" type="button">Sign In to LMS</button>
+
+    <div class="auth-switch">
+      Don't have an account? <a tabindex="0" role="button">Create Account</a>
+    </div>
+    <div class="auth-switch" style="margin-top:8px">
+      <a href="#" style="color:var(--gray-400);font-size:12px;">Forgot Password?</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SIGNUP PAGE
+══════════════════════════════════════════════════════════ -->
+<div id="page-signup" class="page" role="main" aria-label="Create Account">
+  <div class="auth-card auth-card--wide">
+    <div class="school-logo" aria-hidden="true">🏫</div>
+    <h1>Create Account</h1>
+    <p class="subtitle">Register for Nusrat High School LMS</p>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="signup-fname">First Name</label>
+        <input type="text" id="signup-fname" placeholder="First name" autocomplete="given-name" aria-required="true">
+      </div>
+      <div class="form-group">
+        <label for="signup-lname">Last Name</label>
+        <input type="text" id="signup-lname" placeholder="Last name" autocomplete="family-name" aria-required="true">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="signup-email">Email Address</label>
+      <input type="email" id="signup-email" placeholder="your@email.com" autocomplete="email" aria-required="true">
+    </div>
+
+    <div class="form-group">
+      <label for="signup-roll">Roll Number / Employee ID</label>
+      <input type="text" id="signup-roll" placeholder="NHS-2024-XXX" aria-required="true">
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="signup-class">Class / Grade</label>
+        <select id="signup-class">
+          <option value="">Select Class</option>
+          <option value="6">Class 6</option>
+          <option value="7">Class 7</option>
+          <option value="8">Class 8</option>
+          <option value="9">Class 9</option>
+          <option value="10">Class 10</option>
+          <option value="11">Class 11</option>
+          <option value="12">Class 12</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="signup-role">Role</label>
+        <select id="signup-role">
+          <option value="student">Student</option>
+          <option value="teacher">Teacher</option>
+          <option value="parent">Parent</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="signup-pw1">Password</label>
+        <input type="password" id="signup-pw1" placeholder="••••••••" autocomplete="new-password" aria-required="true">
+      </div>
+      <div class="form-group">
+        <label for="signup-pw2">Confirm Password</label>
+        <input type="password" id="signup-pw2" placeholder="••••••••" autocomplete="new-password" aria-required="true">
+      </div>
+    </div>
+
+    <button class="btn-primary" type="button">Create Account</button>
+
+    <div class="auth-switch">
+      Already have an account? <a tabindex="0" role="button">Sign In</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     MAIN APP
+══════════════════════════════════════════════════════════ -->
+<div id="page-app" class="page" role="main">
+
+  <!-- ── Sidebar Overlay (mobile) ─────────────────────────── -->
+  <div class="sidebar-overlay" aria-hidden="true"></div>
+
+  <!-- ── Sidebar ──────────────────────────────────────────── -->
+  <aside class="sidebar" role="navigation" aria-label="Main navigation">
+
+    <!-- Header -->
+    <div class="sidebar-header">
+      <div class="sidebar-logo" aria-hidden="true">🏫</div>
+      <div class="sidebar-school">
+        <strong>Nusrat High School</strong>
+        <span>Learning Management System</span>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sidebar-nav">
+
+      <!-- Main -->
+      <div class="nav-section">
+        <div class="nav-section-label">Main</div>
+        <div class="nav-item active" data-section="dashboard" tabindex="0" role="button" aria-label="Dashboard">
+          <span class="nav-icon" aria-hidden="true">🏠</span> Dashboard
+        </div>
+        <div class="nav-item" data-section="profile" tabindex="0" role="button" aria-label="My Profile">
+          <span class="nav-icon" aria-hidden="true">👤</span> My Profile
+        </div>
+      </div>
+
+      <!-- Academics -->
+      <div class="nav-section">
+        <div class="nav-section-label">Academics</div>
+        <div class="nav-item" data-section="attendance" tabindex="0" role="button" aria-label="Attendance">
+          <span class="nav-icon" aria-hidden="true">📅</span> Attendance
+        </div>
+        <div class="nav-item" data-section="results" tabindex="0" role="button" aria-label="Results and Grades">
+          <span class="nav-icon" aria-hidden="true">📊</span> Results &amp; Grades
+        </div>
+        <div class="nav-item" data-section="timetable" tabindex="0" role="button" aria-label="Timetable">
+          <span class="nav-icon" aria-hidden="true">🗓️</span> Timetable
+        </div>
+      </div>
+
+      <!-- Finance -->
+      <div class="nav-section">
+        <div class="nav-section-label">Finance</div>
+        <div class="nav-item" data-section="fees" tabindex="0" role="button" aria-label="Fee Record">
+          <span class="nav-icon" aria-hidden="true">💰</span> Fee Record
+        </div>
+      </div>
+
+      <!-- Communication -->
+      <div class="nav-section">
+        <div class="nav-section-label">Communication</div>
+        <div class="nav-item" data-section="notices" tabindex="0" role="button" aria-label="Notice Board">
+          <span class="nav-icon" aria-hidden="true">📢</span> Notice Board
+        </div>
+        <div class="nav-item" data-section="parent" tabindex="0" role="button" aria-label="Parent Portal">
+          <span class="nav-icon" aria-hidden="true">👨‍👩‍👧</span> Parent Portal
+        </div>
+      </div>
+
+    </nav>
+
+    <!-- User Info & Logout -->
+    <div class="sidebar-user">
+      <div class="user-avatar-sm" id="sidebar-avatar-wrap" aria-label="User avatar">
+        <span id="sidebar-avatar-initials">AM</span>
+      </div>
+      <div class="user-info-sm">
+        <strong>Ahmed Malik</strong>
+        <span>Class 10-A &bull; Roll: 14</span>
+      </div>
+      <button class="logout-btn" title="Sign Out" aria-label="Sign Out">⬅</button>
+    </div>
+
+  </aside>
+
+  <!-- ── Main Content ──────────────────────────────────────── -->
+  <main class="main">
+
+    <!-- Topbar -->
+    <header class="topbar" role="banner">
+      <div class="topbar-left">
+        <!-- Hamburger (mobile only) -->
+        <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <h2 id="topbar-title">Dashboard</h2>
+      </div>
+      <div class="topbar-right">
+        <span class="topbar-badge">🏆 Session 2024–25</span>
+        <span class="topbar-date" id="topbar-date" aria-live="polite"></span>
+      </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="content">
+
+
+      <!-- ╔══════════════════════════════════════════════════════
+           ║  DASHBOARD
+           ╚══════════════════════════════════════════════════ -->
+      <section id="section-dashboard" class="section-view active" aria-label="Dashboard">
+
+        <!-- Welcome banner -->
+        <div class="welcome-banner" role="region" aria-label="Welcome">
+          <div>
+            <h2>Welcome back, Ahmed! 👋</h2>
+            <p>Class 10-A &nbsp;&bull;&nbsp; Roll No. 14 &nbsp;&bull;&nbsp; Academic Session 2024–25</p>
+          </div>
+        </div>
+
+        <!-- Quick stats -->
+        <div class="stats-grid" role="list" aria-label="Quick statistics">
+
+          <div class="stat-card" role="listitem">
+            <div class="stat-icon" aria-hidden="true">📅</div>
+            <div class="stat-label">Attendance</div>
+            <div class="stat-value">92%</div>
+            <div class="stat-sub">184 / 200 days present</div>
+          </div>
+
+          <div class="stat-card" role="listitem">
+            <div class="stat-icon" aria-hidden="true">📊</div>
+            <div class="stat-label">Overall Grade</div>
+            <div class="stat-value">A</div>
+            <div class="stat-sub">GPA: 3.8 / 4.0</div>
+          </div>
+
+          <div class="stat-card" role="listitem">
+            <div class="stat-icon" aria-hidden="true">💰</div>
+            <div class="stat-label">Fees Due</div>
+            <div class="stat-value stat-value--danger">₨ 4,500</div>
+            <div class="stat-sub">Due: 15 Dec 2024</div>
+          </div>
+
+          <div class="stat-card" role="listitem">
+            <div class="stat-icon" aria-hidden="true">🏅</div>
+            <div class="stat-label">Class Rank</div>
+            <div class="stat-value">3<sup style="font-size:14px">rd</sup></div>
+            <div class="stat-sub">Out of 38 students</div>
+          </div>
+
+        </div>
+
+        <!-- Dashboard cards -->
+        <div class="dash-grid">
+
+          <!-- Today's schedule -->
+          <div class="card">
+            <div class="card-title"><span class="dot" aria-hidden="true"></span> Today's Schedule</div>
+            <div class="schedule-item">
+              <div class="sched-time">08:00 AM</div>
+              <div class="sched-dot" style="background:var(--green-500)" aria-hidden="true"></div>
+              <div>
+                <div class="sched-subject">Mathematics</div>
+                <div class="sched-room">Room 12 – Mr. Imran</div>
+              </div>
+            </div>
+            <div class="schedule-item">
+              <div class="sched-time">09:00 AM</div>
+              <div class="sched-dot" style="background:var(--info)" aria-hidden="true"></div>
+              <div>
+                <div class="sched-subject">English Language</div>
+                <div class="sched-room">Room 08 – Ms. Sana</div>
+              </div>
+            </div>
+            <div class="schedule-item">
+              <div class="sched-time">10:00 AM</div>
+              <div class="sched-dot" style="background:var(--gold-400)" aria-hidden="true"></div>
+              <div>
+                <div class="sched-subject">⏸ Break – 30 mins</div>
+                <div class="sched-room">Canteen</div>
+              </div>
+            </div>
+            <div class="schedule-item">
+              <div class="sched-time">10:30 AM</div>
+              <div class="sched-dot" style="background:#8b5cf6" aria-hidden="true"></div>
+              <div>
+                <div class="sched-subject">Physics</div>
+                <div class="sched-room">Lab 2 – Mr. Tariq</div>
+              </div>
+            </div>
+            <div class="schedule-item">
+              <div class="sched-time">11:30 AM</div>
+              <div class="sched-dot" style="background:var(--danger)" aria-hidden="true"></div>
+              <div>
+                <div class="sched-subject">Computer Science</div>
+                <div class="sched-room">Computer Lab – Ms. Ayesha</div>
+              </div>
+            </div>
+            <div class="schedule-item">
+              <div class="sched-time">12:30 PM</div>
+              <div class="sched-dot" style="background:var(--green-400)" aria-hidden="true"></div>
+              <div>
+                <div class="sched-subject">Islamic Studies</div>
+                <div class="sched-room">Room 05 – Maulana Zahid</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Latest notices -->
+          <div class="card">
+            <div class="card-title"><span class="dot" aria-hidden="true"></span> Latest Notices</div>
+
+            <div class="notice-item">
+              <div><span class="notice-tag tag-urgent">Urgent</span></div>
+              <div class="notice-title">Annual Exam Schedule Released</div>
+              <div class="notice-date">📅 Dec 5, 2024</div>
+            </div>
+            <div class="notice-item">
+              <div><span class="notice-tag tag-event">Event</span></div>
+              <div class="notice-title">Science Fair – Registration Open</div>
+              <div class="notice-date">📅 Dec 3, 2024</div>
+            </div>
+            <div class="notice-item">
+              <div><span class="notice-tag tag-info">Info</span></div>
+              <div class="notice-title">Winter Holiday Schedule Announced</div>
+              <div class="notice-date">📅 Nov 30, 2024</div>
+            </div>
+            <div class="notice-item">
+              <div><span class="notice-tag tag-event">Event</span></div>
+              <div class="notice-title">Annual Sports Day – Dec 20</div>
+              <div class="notice-date">📅 Nov 28, 2024</div>
+            </div>
+            <div class="notice-item">
+              <div><span class="notice-tag tag-info">Info</span></div>
+              <div class="notice-title">Fee Submission Deadline Reminder</div>
+              <div class="notice-date">📅 Nov 25, 2024</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- ╔══════════════════════════════════════════════════════
+           ║  ATTENDANCE
+           ╚══════════════════════════════════════════════════ -->
+      <section id="section-attendance" class="section-view" aria-label="Attendance Record">
+
+        <!-- Summary cards -->
+        <div class="att-summary">
+          <div class="att-card present">
+            <div class="att-num">184</div>
+            <div class="att-lbl" style="color:var(--green-700)">✅ Present</div>
+          </div>
+          <div class="att-card absent">
+            <div class="att-num">10</div>
+            <div class="att-lbl" style="color:var(--danger)">❌ Absent</div>
+          </div>
+          <div class="att-card leave">
+            <div class="att-num">6</div>
+            <div class="att-lbl" style="color:var(--warning)">📋 Leave</div>
+          </div>
+        </div>
+
+        <!-- Progress -->
+        <div class="card mb-24">
+          <div class="card-title"><span class="dot" aria-hidden="true"></span> Attendance Progress (This Month)</div>
+
+          <div class="mb-16">
+            <div class="progress-label">
+              <span>Overall Attendance Rate</span>
+              <strong>92%</strong>
+            </div>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" data-width="92%" style="background:var(--green-500)"></div>
+            </div>
+          </div>
+
+          <div class="mb-16">
+            <div class="progress-label">
+              <span>December 2024</span>
+              <strong>88%</strong>
+            </div>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" data-width="88%" style="background:var(--green-400)"></div>
+            </div>
+          </div>
+
+          <div>
+            <div class="progress-label">
+              <span>November 2024</span>
+              <strong>95%</strong>
+            </div>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" data-width="95%" style="background:var(--green-500)"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Attendance table -->
+        <div class="card">
+          <div class="card-title"><span class="dot" aria-hidden="true"></span> December 2024 – Daily Record</div>
+          <div style="overflow-x:auto">
+            <table>
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Day</th>
+                  <th>Status</th>
+                  <th>Remarks</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Dec 1, 2024</td><td>Monday</td><td><span class="badge badge-present">Present</span></td><td>—</td></tr>
+                <tr><td>Dec 2, 2024</td><td>Tuesday</td><td><span class="badge badge-present">Present</span></td><td>—</td></tr>
+                <tr><td>Dec 3, 2024</td><td>Wednesday</td><td><span class="badge badge-absent">Absent</span></td><td>Unnotified</td></tr>
+                <tr><td>Dec 4, 2024</td><td>Thursday</td><td><span class="badge badge-present">Present</span></td><td>—</td></tr>
+                <tr><td>Dec 5, 2024</td><td>Friday</td><td><span class="badge badge-late">Late</span></td><td>15 mins late</td></tr>
+                <tr><td>Dec 6, 2024</td><td>Saturday</td><td><span class="badge badge-present">Present</span></td><td>—</td></tr>
+                <tr><td>Dec 9, 2024</td><td>Monday</td><td><span class="badge badge-leave">Leave</span></td><td>Medical leave</td></tr>
+                <tr><td>Dec 10, 2024</td><td>Tuesday</td><td><span class="badge badge-present">Present</span></td><td>—</td></tr>
+                <tr><td>Dec 11, 2024</td><td>Wednesday</td><td><span class="badge badge-present">Present</span></td><td>—</td></tr>
+                <tr><td>Dec 12, 2024</td><td>Thursday</td><td><span class="badge badge-present">Present</span></td><td>—</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ╔══════════════════════════════════════════════════════
+           ║  RESULTS & GRADES
+           ╚══════════════════════════════════════════════════ -->
+      <section id="section-results" class="section-view" aria-label="Results and Grades">
+
+        <!-- GPA banner -->
+        <div class="result-gpa">
+          <div class="gpa-num">3.8</div>
+          <div>
+            <div class="gpa-label">Cumulative GPA – Academic Year 2024–25</div>
+            <div class="gpa-rank">🏅 Rank 3rd out of 38 students</div>
+          </div>
+        </div>
+
+        <!-- Exam selector -->
+        <div class="card mb-24">
+          <div class="result-header">
+            <div class="card-title" style="margin-bottom:0"><span class="dot" aria-hidden="true"></span> Subject-wise Performance</div>
+            <select id="result-exam-select" aria-label="Select examination">
+              <option value="mid">Mid-Term Examination 2024</option>
+              <option value="annual">Annual Examination 2024</option>
+              <option value="pre">Pre-Annual 2024</option>
+            </select>
+          </div>
+
+          <!-- Subjects -->
+          <div class="subject-result">
+            <div class="sub-name">Mathematics</div>
+            <div class="sub-marks">95 / 100</div>
+            <div class="result-bar-wrap"><div class="result-bar bar-a" data-width="95%"></div></div>
+            <div class="sub-grade grade-a">A+</div>
+          </div>
+          <div class="subject-result">
+            <div class="sub-name">English Language</div>
+            <div class="sub-marks">82 / 100</div>
+            <div class="result-bar-wrap"><div class="result-bar bar-b" data-width="82%"></div></div>
+            <div class="sub-grade grade-b">B+</div>
+          </div>
+          <div class="subject-result">
+            <div class="sub-name">Physics</div>
+            <div class="sub-marks">88 / 100</div>
+            <div class="result-bar-wrap"><div class="result-bar bar-a" data-width="88%"></div></div>
+            <div class="sub-grade grade-a">A</div>
+          </div>
+          <div class="subject-result">
+            <div class="sub-name">Computer Science</div>
+            <div class="sub-marks">97 / 100</div>
+            <div class="result-bar-wrap"><div class="result-bar bar-a" data-width="97%"></div></div>
+            <div class="sub-grade grade-a">A+</div>
+          </div>
+          <div class="subject-result">
+            <div class="sub-name">Urdu</div>
+            <div class="sub-marks">76 / 100</div>
+            <div class="result-bar-wrap"><div class="result-bar bar-b" data-width="76%"></div></div>
+            <div class="sub-grade grade-b">B</div>
+          </div>
+          <div class="subject-result">
+            <div class="sub-name">Islamic Studies</div>
+            <div class="sub-marks">91 / 100</div>
+            <div class="result-bar-wrap"><div class="result-bar bar-a" data-width="91%"></div></div>
+            <div class="sub-grade grade-a">A</div>
+          </div>
+          <div class="subject-result">
+            <div class="sub-name">Pakistan Studies</div>
+            <div class="sub-marks">79 / 100</div>
+            <div class="result-bar-wrap"><div class="result-bar bar-b" data-width="79%"></div></div>
+            <div class="sub-grade grade-b">B+</div>
+          </div>
+        </div>
+
+        <!-- Grade history table -->
+        <div class="card">
+          <div class="card-title"><span class="dot" aria-hidden="true"></span> Examination History</div>
+          <div style="overflow-x:auto">
+            <table>
+              <thead>
+                <tr>
+                  <th>Exam</th>
+                  <th>Date</th>
+                  <th>Marks Obtained</th>
+                  <th>Percentage</th>
+                  <th>Grade</th>
+                  <th>Rank</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Mid-Term 2024</td>
+                  <td>Sep 2024</td>
+                  <td>608 / 700</td>
+                  <td>86.8%</td>
+                  <td><span class="badge badge-present">A</span></td>
+                  <td>4th / 38</td>
+                </tr>
+                <tr>
+                  <td>Pre-Annual 2024</td>
+                  <td>Nov 2024</td>
+                  <td>625 / 700</td>
+                  <td>89.2%</td>
+                  <td><span class="badge badge-present">A</span></td>
+                  <td>3rd / 38</td>
+                </tr>
+                <tr>
+                  <td>Annual 2023</td>
+                  <td>Mar 2024</td>
+                  <td>589 / 700</td>
+                  <td>84.1%</td>
+                  <td><span class="badge badge-present">A</span></td>
+                  <td>5th / 38</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ╔══════════════════════════════════════════════════════
+           ║  FEE RECORD
+           ╚══════════════════════════════════════════════════ -->
+      <section id="section-fees" class="section-view" aria-label="Fee Record">
+
+        <!-- Overview -->
+        <div class="fees-overview">
+          <div class="fee-stat total">
+            <div class="fee-stat-label">Total Annual Fees</div>
+            <div class="fee-stat-amount">₨ 54,000</div>
+          </div>
+          <div class="fee-stat paid">
+            <div class="fee-stat-label">Amount Paid</div>
+            <div class="fee-stat-amount">₨ 49,500</div>
+          </div>
+          <div class="fee-stat due">
+            <div class="fee-stat-label">Amount Due</div>
+            <div class="fee-stat-amount">₨ 4,500</div>
+          </div>
+        </div>
+
+        <!-- Fee table -->
+        <div class="card mb-24">
+          <div class="card-title"><span class="dot" aria-hidden="true"></span> Fee Payment History</div>
+          <div style="overflow-x:auto">
+            <table>
+              <thead>
+                <tr>
+                  <th>Month</th>
+                  <th>Description</th>
+                  <th>Amount</th>
+                  <th>Paid Date</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>December 2024</td>
+                  <td>Monthly Tuition Fee</td>
+                  <td>₨ 4,500</td>
+                  <td>—</td>
+                  <td><span class="badge badge-pending">Pending</span></td>
+                  <td><button class="pay-btn" type="button">Pay Now</button></td>
+                </tr>
+                <tr>
+                  <td>November 2024</td>
+                  <td>Monthly Tuition Fee</td>
+                  <td>₨ 4,500</td>
+                  <td>Nov 5, 2024</td>
+                  <td><span class="badge badge-paid">Paid</span></td>
+                  <td>—</td>
+                </tr>
+                <tr>
+                  <td>October 2024</td>
+                  <td>Monthly Tuition Fee</td>
+                  <td>₨ 4,500</td>
+                  <td>Oct 4, 2024</td>
+                  <td><span class="badge badge-paid">Paid</span></td>
+                  <td>—</td>
+                </tr>
+                <tr>
+                  <td>September 2024</td>
+                  <td>Monthly Tuition Fee + Lab Fee</td>
+                  <td>₨ 5,000</td>
+                  <td>Sep 6, 2024</td>
+                  <td><span class="badge badge-paid">Paid</span></td>
+                  <td>—</td>
+                </tr>
+                <tr>
+                  <td>August 2024</td>
+                  <td>Monthly Tuition Fee + Sports</td>
+                  <td>₨ 5,000</td>
+                  <td>Aug 3, 2024</td>
+                  <td><span class="badge badge-paid">Paid</span></td>
+                  <td>—</td>
+                </tr>
+                <tr>
+                  <td>July 2024</td>
+                  <td>Annual Registration + Tuition</td>
+                  <td>₨ 8,000</td>
+                  <td>Jul 8, 2024</td>
+                  <td><span class="badge badge-paid">Paid</span></td>
+                  <td>—</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Fee breakdown -->
+        <div class="card">
+          <div class="card-title"><span class="dot" aria-hidden="true"></span> Annual Fee Breakdown</div>
+          <table>
+            <tbody>
+              <tr>
+                <td>Monthly Tuition Fee (×12)</td>
+                <td class="text-sm text-muted">₨ 4,500/month</td>
+                <td class="font-600">₨ 54,000</td>
+              </tr>
+              <tr>
+                <td>Lab Fee (Annual)</td>
+                <td class="text-sm text-muted">Science labs</td>
+                <td class="font-600">₨ 2,500</td>
+              </tr>
+              <tr>
+                <td>Sports Fee (Annual)</td>
+                <td class="text-sm text-muted">Sports equipment</td>
+                <td class="font-600">₨ 1,500</td>
+              </tr>
+              <tr>
+                <td>Registration Fee</td>
+                <td class="text-sm text-muted">One-time</td>
+                <td class="font-600">₨ 3,000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+
+      <!-- ╔══════════════════════════════════════════════════════
+           ║  PROFILE
+           ╚══════════════════════════════════════════════════ -->
+      <section id="section-profile" class="section-view" aria-label="My Profile">
+
+        <!-- Profile hero -->
+        <div class="profile-hero">
+          <div class="profile-avatar-wrap">
+            <div class="profile-avatar" id="profile-avatar-display" aria-label="Profile photo">AM</div>
+            <div class="avatar-edit-btn" aria-label="Change profile photo" tabindex="0" role="button">✏️</div>
+            <input type="file" id="avatar-upload" accept="image/*" aria-label="Upload profile photo">
+          </div>
+          <div>
+            <h2 class="profile-name">Ahmed Malik</h2>
+            <p class="profile-id">Roll No: NHS-2024-014 &nbsp;&bull;&nbsp; Class 10-A</p>
+            <div class="profile-tags">
+              <span class="profile-tag">🎓 Student</span>
+              <span class="profile-tag">📍 Lahore</span>
+              <span class="profile-tag">📅 Session 2024–25</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+
+          <!-- Personal information -->
+          <div class="profile-section">
+            <div class="profile-section-title">Personal Information</div>
+            <div class="profile-form-grid">
+              <div class="profile-field">
+                <label for="pf-fname">First Name</label>
+                <input type="text" id="pf-fname" value="Ahmed">
+              </div>
+              <div class="profile-field">
+                <label for="pf-lname">Last Name</label>
+                <input type="text" id="pf-lname" value="Malik">
+              </div>
+              <div class="profile-field">
+                <label for="pf-dob">Date of Birth</label>
+                <input type="date" id="pf-dob" value="2009-04-12">
+              </div>
+              <div class="profile-field">
+                <label for="pf-gender">Gender</label>
+                <select id="pf-gender">
+                  <option selected>Male</option>
+                  <option>Female</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="profile-field">
+                <label for="pf-phone">Contact Number</label>
+                <input type="tel" id="pf-phone" value="+92 300 1234567">
+              </div>
+              <div class="profile-field">
+                <label for="pf-email">Email Address</label>
+                <input type="email" id="pf-email" value="ahmed.malik@student.nhs.edu.pk">
+              </div>
+            </div>
+          </div>
+
+          <!-- Academic information -->
+          <div class="profile-section">
+            <div class="profile-section-title">Academic Information</div>
+            <div class="profile-form-grid">
+              <div class="profile-field">
+                <label>Roll Number</label>
+                <input type="text" value="NHS-2024-014" readonly style="background:var(--gray-50);color:var(--gray-400)">
+              </div>
+              <div class="profile-field">
+                <label>Class & Section</label>
+                <input type="text" value="Class 10 – Section A" readonly style="background:var(--gray-50);color:var(--gray-400)">
+              </div>
+              <div class="profile-field">
+                <label>Academic Session</label>
+                <input type="text" value="2024–2025" readonly style="background:var(--gray-50);color:var(--gray-400)">
+              </div>
+              <div class="profile-field">
+                <label>Class Teacher</label>
+                <input type="text" value="Ms. Farrukh Naz" readonly style="background:var(--gray-50);color:var(--gray-400)">
+              </div>
+            </div>
+          </div>
+
+          <!-- Guardian information -->
+          <div class="profile-section">
+            <div class="profile-section-title">Guardian / Parent Information</div>
+            <div class="profile-form-grid">
+              <div class="profile-field">
+                <label for="pf-guardian">Guardian Name</label>
+                <input type="text" id="pf-guardian" value="Mr. Tariq Malik">
+              </div>
+              <div class="profile-field">
+                <label for="pf-guardian-phone">Guardian Phone</label>
+                <input type="tel" id="pf-guardian-phone" value="+92 321 9876543">
+              </div>
+              <div class="profile-field" style="grid-column:1/-1">
+                <label for="pf-address">Home Address</label>
+                <input type="text" id="pf-address" value="House 42, Street 7, DHA Phase 5, Lahore">
+              </div>
+            </div>
+          </div>
+
+          <button class="save-btn" type="button">💾 Save Changes</button>
+        </div>
+      </section>
+
+
+      <!-- ╔══════════════════════════════════════════════════════
+           ║  TIMETABLE
+           ╚══════════════════════════════════════════════════ -->
+      <section id="section-timetable" class="section-view" aria-label="Class Timetable">
+
+        <div class="card">
+          <div class="card-title"><span class="dot" aria-hidden="true"></span> Weekly Timetable – Class 10-A</div>
+          <div class="timetable-wrap">
+            <table class="timetable" role="grid" aria-label="Weekly timetable">
+              <thead>
+                <tr>
+                  <th>Period / Time</th>
+                  <th>Monday</th>
+                  <th>Tuesday</th>
+                  <th>Wednesday</th>
+                  <th>Thursday</th>
+                  <th>Friday</th>
+                  <th>Saturday</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="text-align:center;font-size:12px;color:var(--gray-400)">P1<br>8:00–9:00</td>
+                  <td><div class="tt-cell tt-math">Mathematics<div class="tt-period">Mr. Imran</div></div></td>
+                  <td><div class="tt-cell tt-eng">English<div class="tt-period">Ms. Sana</div></div></td>
+                  <td><div class="tt-cell tt-sci">Physics<div class="tt-period">Mr. Tariq</div></div></td>
+                  <td><div class="tt-cell tt-math">Mathematics<div class="tt-period">Mr. Imran</div></div></td>
+                  <td><div class="tt-cell tt-cs">Computer Sci<div class="tt-period">Ms. Ayesha</div></div></td>
+                  <td><div class="tt-cell tt-isl">Islamic Studies<div class="tt-period">Maulana Z.</div></div></td>
+                </tr>
+                <tr>
+                  <td style="text-align:center;font-size:12px;color:var(--gray-400)">P2<br>9:00–10:00</td>
+                  <td><div class="tt-cell tt-eng">English<div class="tt-period">Ms. Sana</div></div></td>
+                  <td><div class="tt-cell tt-math">Mathematics<div class="tt-period">Mr. Imran</div></div></td>
+                  <td><div class="tt-cell tt-urdu">Urdu<div class="tt-period">Mr. Hassan</div></div></td>
+                  <td><div class="tt-cell tt-sci">Physics<div class="tt-period">Mr. Tariq</div></div></td>
+                  <td><div class="tt-cell tt-eng">English<div class="tt-period">Ms. Sana</div></div></td>
+                  <td><div class="tt-cell tt-math">Mathematics<div class="tt-period">Mr. Imran</div></div></td>
+                </tr>
+                <tr>
+                  <td style="text-align:center;font-size:12px;color:var(--gray-400)">Break<br>10:00–10:30</td>
+                  <td colspan="6"><div class="tt-cell tt-break" style="margin:4px">☕ Break – 30 Minutes</div></td>
+                </tr>
+                <tr>
+                  <td style="text-align:center;font-size:12px;color:var(--gray-400)">P3<br>10:30–11:30</td>
+                  <td><div class="tt-cell tt-sci">Physics<div class="tt-period">Mr. Tariq</div></div></td>
+                  <td><div class="tt-cell tt-cs">Computer Sci<div class="tt-period">Ms. Ayesha</div></div></td>
+                  <td><div class="tt-cell tt-math">Mathematics<div class="tt-period">Mr. Imran</div></div></td>
+                  <td><div class="tt-cell tt-urdu">Urdu<div class="tt-period">Mr. Hassan</div></div></td>
+                  <td><div class="tt-cell tt-sci">Physics<div class="tt-period">Mr. Tariq</div></div></td>
+                  <td><div class="tt-cell tt-cs">Computer Sci<div class="tt-period">Ms. Ayesha</div></div></td>
+                </tr>
+                <tr>
+                  <td style="text-align:center;font-size:12px;color:var(--gray-400)">P4<br>11:30–12:30</td>
+                  <td><div class="tt-cell tt-cs">Computer Sci<div class="tt-period">Ms. Ayesha</div></div></td>
+                  <td><div class="tt-cell tt-isl">Islamic Studies<div class="tt-period">Maulana Z.</div></div></td>
+                  <td><div class="tt-cell tt-eng">English<div class="tt-period">Ms. Sana</div></div></td>
+                  <td><div class="tt-cell tt-cs">Computer Sci<div class="tt-period">Ms. Ayesha</div></div></td>
+                  <td><div class="tt-cell tt-urdu">Urdu<div class="tt-period">Mr. Hassan</div></div></td>
+                  <td><div class="tt-cell tt-pe">Phys. Education<div class="tt-period">Coach Bilal</div></div></td>
+                </tr>
+                <tr>
+                  <td style="text-align:center;font-size:12px;color:var(--gray-400)">P5<br>12:30–1:30</td>
+                  <td><div class="tt-cell tt-isl">Islamic Studies<div class="tt-period">Maulana Z.</div></div></td>
+                  <td><div class="tt-cell tt-urdu">Urdu<div class="tt-period">Mr. Hassan</div></div></td>
+                  <td><div class="tt-cell tt-isl">Islamic Studies<div class="tt-period">Maulana Z.</div></div></td>
+                  <td><div class="tt-cell tt-eng">English<div class="tt-period">Ms. Sana</div></div></td>
+                  <td><div class="tt-cell tt-pe">Phys. Education<div class="tt-period">Coach Bilal</div></div></td>
+                  <td><div class="tt-cell tt-break">— Closed —</div></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ╔══════════════════════════════════════════════════════
+           ║  NOTICE BOARD
+           ╚══════════════════════════════════════════════════ -->
+      <section id="section-notices" class="section-view" aria-label="Notice Board">
+
+        <article class="notice-card">
+          <div class="notice-card-header">
+            <div class="notice-card-title">📋 Annual Examination Schedule – December 2024</div>
+            <span class="notice-tag tag-urgent">Urgent</span>
+          </div>
+          <p class="notice-card-body">The annual examination schedule for all classes (6–12) has been released. Students are advised to collect their admit cards from the administration office. Examinations will begin from December 20, 2024.</p>
+          <div class="notice-card-footer">
+            <span>📅 Dec 5, 2024</span>
+            <span>👤 Principal Office</span>
+          </div>
+        </article>
+
+        <article class="notice-card">
+          <div class="notice-card-header">
+            <div class="notice-card-title">🔬 Science Fair 2024 – Registration Open</div>
+            <span class="notice-tag tag-event">Event</span>
+          </div>
+          <p class="notice-card-body">The annual Science Fair is scheduled for January 15, 2025. Students from Classes 8–12 are encouraged to register their projects. Registration deadline is December 20, 2024. Contact the Science Department for project guidelines.</p>
+          <div class="notice-card-footer">
+            <span>📅 Dec 3, 2024</span>
+            <span>👤 Science Department</span>
+          </div>
+        </article>
+
+        <article class="notice-card">
+          <div class="notice-card-header">
+            <div class="notice-card-title">❄️ Winter Holiday Schedule 2024–25</div>
+            <span class="notice-tag tag-info">Info</span>
+          </div>
+          <p class="notice-card-body">Winter holidays will begin from December 25, 2024 and the school will reopen on January 6, 2025. Students are advised to utilize this time productively for exam preparation.</p>
+          <div class="notice-card-footer">
+            <span>📅 Nov 30, 2024</span>
+            <span>👤 Administration</span>
+          </div>
+        </article>
+
+        <article class="notice-card">
+          <div class="notice-card-header">
+            <div class="notice-card-title">🏃 Annual Sports Day – December 20, 2024</div>
+            <span class="notice-tag tag-event">Event</span>
+          </div>
+          <p class="notice-card-body">Nusrat High School's Annual Sports Day will be held on December 20, 2024 at the school ground. Events include cricket, football, athletics, and tug-of-war. Parents are cordially invited.</p>
+          <div class="notice-card-footer">
+            <span>📅 Nov 28, 2024</span>
+            <span>👤 Sports Department</span>
+          </div>
+        </article>
+
+        <article class="notice-card">
+          <div class="notice-card-header">
+            <div class="notice-card-title">💳 Fee Submission – December 15 Deadline</div>
+            <span class="notice-tag tag-urgent">Urgent</span>
+          </div>
+          <p class="notice-card-body">All students are reminded that the December 2024 fee deadline is December 15, 2024. A late fine of ₨500 will be charged after the due date. Parents may contact the accounts office for payment options.</p>
+          <div class="notice-card-footer">
+            <span>📅 Nov 25, 2024</span>
+            <span>👤 Accounts Office</span>
+          </div>
+        </article>
+
+      </section>
+
+
+      <!-- ╔══════════════════════════════════════════════════════
+           ║  PARENT PORTAL
+           ╚══════════════════════════════════════════════════ -->
+      <section id="section-parent" class="section-view" aria-label="Parent Portal">
+
+        <!-- Child info card -->
+        <div class="parent-child-card">
+          <div class="child-avatar">AM</div>
+          <div>
+            <div class="child-name">Ahmed Malik</div>
+            <div class="child-class">Class 10-A &bull; Roll No. 14 &bull; Session 2024–25</div>
+          </div>
+        </div>
+
+        <!-- Parent grid -->
+        <div class="parent-grid">
+
+          <!-- Quick summary -->
+          <div class="card">
+            <div class="card-title"><span class="dot" aria-hidden="true"></span> Child's Quick Summary</div>
+            <table>
+              <tbody>
+                <tr>
+                  <td class="text-muted text-sm">Attendance Rate</td>
+                  <td class="font-600" style="color:var(--green-700)">92%</td>
+                </tr>
+                <tr>
+                  <td class="text-muted text-sm">Current GPA</td>
+                  <td class="font-600" style="color:var(--green-700)">3.8 / 4.0</td>
+                </tr>
+                <tr>
+                  <td class="text-muted text-sm">Class Rank</td>
+                  <td class="font-600">3rd / 38</td>
+                </tr>
+                <tr>
+                  <td class="text-muted text-sm">Fee Status</td>
+                  <td><span class="badge badge-pending">₨4,500 Due</span></td>
+                </tr>
+                <tr>
+                  <td class="text-muted text-sm">Last Exam</td>
+                  <td class="font-600">89.2% (A Grade)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Teacher remarks -->
+          <div class="card">
+            <div class="card-title"><span class="dot" aria-hidden="true"></span> Teacher Remarks</div>
+            <div class="remark-card remark-card--green">
+              <div class="remark-teacher" style="color:var(--green-800)">Mr. Imran (Mathematics)</div>
+              <div class="remark-text">"Ahmed is exceptionally strong in Mathematics. Consistent performance and great problem-solving skills."</div>
+            </div>
+            <div class="remark-card remark-card--blue">
+              <div class="remark-teacher" style="color:#1a5fa8">Ms. Sana (English)</div>
+              <div class="remark-text">"Good performance overall. Can improve written expression. Encourage reading at home."</div>
+            </div>
+            <div class="remark-card remark-card--red">
+              <div class="remark-teacher" style="color:var(--danger)">Ms. Ayesha (Computer Sci.)</div>
+              <div class="remark-text">"Outstanding student! Creative thinking and excellent coding skills. Should consider programming as a career."</div>
+            </div>
+          </div>
+
+          <!-- Upcoming events -->
+          <div class="card">
+            <div class="card-title"><span class="dot" aria-hidden="true"></span> Upcoming Events</div>
+            <div class="schedule-item">
+              <div class="sched-time">Dec 15</div>
+              <div class="sched-dot" style="background:var(--danger)" aria-hidden="true"></div>
+              <div><div class="sched-subject">Fee Deadline</div><div class="sched-room">₨4,500 due</div></div>
+            </div>
+            <div class="schedule-item">
+              <div class="sched-time">Dec 20</div>
+              <div class="sched-dot" style="background:var(--gold-400)" aria-hidden="true"></div>
+              <div><div class="sched-subject">Sports Day</div><div class="sched-room">School Ground</div></div>
+            </div>
+            <div class="schedule-item">
+              <div class="sched-time">Dec 20</div>
+              <div class="sched-dot" style="background:var(--green-500)" aria-hidden="true"></div>
+              <div><div class="sched-subject">Annual Exams Begin</div><div class="sched-room">All classes</div></div>
+            </div>
+            <div class="schedule-item">
+              <div class="sched-time">Dec 25</div>
+              <div class="sched-dot" style="background:#8b5cf6" aria-hidden="true"></div>
+              <div><div class="sched-subject">Winter Holidays</div><div class="sched-room">Until Jan 5</div></div>
+            </div>
+          </div>
+
+          <!-- Contact school -->
+          <div class="card">
+            <div class="card-title"><span class="dot" aria-hidden="true"></span> Contact School</div>
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <div class="contact-item">
+                <span class="contact-item-icon" aria-hidden="true">📞</span>
+                <div>
+                  <div class="contact-item-label">Principal Office</div>
+                  <div class="contact-item-value">+92 42 1234567</div>
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="contact-item-icon" aria-hidden="true">✉️</span>
+                <div>
+                  <div class="contact-item-label">General Inquiries</div>
+                  <div class="contact-item-value">info@nusrathighschool.edu.pk</div>
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="contact-item-icon" aria-hidden="true">🏫</span>
+                <div>
+                  <div class="contact-item-label">School Address</div>
+                  <div class="contact-item-value">Canal Road, Lahore, Punjab</div>
+                </div>
+              </div>
+              <button class="pay-btn w-full" type="button" id="contact-send-btn" style="padding:12px">
+                📩 Send Message to School
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+    </div><!-- /content -->
+  </main>
+</div><!-- /page-app -->
+
+
+<!-- ── Toast Notification ──────────────────────────────────── -->
+<div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+
+<!-- ── JavaScript ──────────────────────────────────────────── -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
